@@ -16,4 +16,6 @@
 
 <resources>
     <string name="app_name">Apply Palette Demo</string>
+    <string name="bacon">Bacon</string>
+    <string name="bacon_example_text">Bacon ipsum dolor amet pork belly meatball kevin spare ribs. Frankfurter swine corned beef meatloaf, strip steak.</string>
 </resources>
