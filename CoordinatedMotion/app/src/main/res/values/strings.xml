@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">CoordinatedMotion</string>
     <string name="transition_avatar">avatar</string>
+    <string name="multiple_elements">Multiple Elements</string>
+    <string name="multiple_incoherent_elements">Multiple Incoherent Elements</string>
+    <string name="curved_motion">Curved Motion</string>
+    <string name="size_changes">Size Changes</string>
 </resources>
