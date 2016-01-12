@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/root"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="containerClick"
         android:orientation="vertical"
         android:paddingTop="8dp"
