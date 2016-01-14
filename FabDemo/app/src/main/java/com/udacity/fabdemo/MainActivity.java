@@ -16,19 +16,13 @@
 package com.udacity.fabdemo;
 
 import android.annotation.TargetApi;
-import android.graphics.Outline;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewOutlineProvider;
-import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
-
-    ImageButton fab;
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override

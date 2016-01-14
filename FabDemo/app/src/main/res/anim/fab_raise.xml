@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--suppress AndroidElementNotAllowed -->
     <item android:state_enabled="true" android:state_pressed="true">
+        <!--suppress AndroidElementNotAllowed -->
         <objectAnimator
             android:duration="@android:integer/config_shortAnimTime"
             android:propertyName="translationZ"
@@ -8,7 +10,9 @@
             android:valueType="floatType"
             />
     </item>
+    <!--suppress AndroidElementNotAllowed -->
     <item>
+        <!--suppress AndroidElementNotAllowed -->
         <objectAnimator
             android:duration="@android:integer/config_shortAnimTime"
             android:propertyName="translationZ"
