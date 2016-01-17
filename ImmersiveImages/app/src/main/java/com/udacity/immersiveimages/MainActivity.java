@@ -15,25 +15,21 @@
  */
 package com.udacity.immersiveimages;
 
-import android.app.Activity;
 import android.content.res.Resources;
+import android.graphics.Matrix;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.GridLayout;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.RadioButton;
-
-import android.graphics.Matrix;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
-import static android.widget.ImageView.*;
+import static android.widget.ImageView.ScaleType;
 
 public class MainActivity extends AppCompatActivity {
     @InjectView(R.id.imageView) ImageView imageView;
