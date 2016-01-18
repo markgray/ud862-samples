@@ -15,23 +15,18 @@
  */
 package com.udacity.interpolationdemo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.internal.widget.AdapterViewCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.animation.Interpolator;
-import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnItemSelected;
-import butterknife.OnItemSelected.Callback.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String PACKAGE = "android.view.animation.";
     private static final String PACKAGE_V4 = "android.support.v4.view.animation.";
     private int duration;
-    private Interpolator interpolator;
 
 
     @Override
@@ -94,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         // Kick off transition
-        int item = interpolatorSpinner.getSelectedItemPosition();
+        @SuppressWarnings("unused") int item = interpolatorSpinner.getSelectedItemPosition();
         onItemSelected(interpolatorSpinner, position);
     }
 
@@ -118,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
             if (path == null)
                 return;
 
-            interpolator = (Interpolator) Class.forName(path).newInstance();
+            Interpolator interpolator = (Interpolator) Class.forName(path).newInstance();
             textView.animate().setInterpolator(interpolator)
                     .setDuration(duration)
                     .setStartDelay(500)
