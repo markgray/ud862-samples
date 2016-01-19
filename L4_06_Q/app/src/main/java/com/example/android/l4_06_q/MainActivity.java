@@ -27,6 +27,7 @@ public class MainActivity extends Activity {
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //noinspection unchecked
                 startActivity(new Intent(MainActivity.this, DetailActivity.class),
                         ActivityOptions.makeSceneTransitionAnimation(MainActivity.this
                                 //, view, "hero"
