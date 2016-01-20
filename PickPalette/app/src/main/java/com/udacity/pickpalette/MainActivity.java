@@ -55,6 +55,7 @@ public class MainActivity extends Activity {
     Toolbar toolbar;
     @InjectView(R.id.imageView)
     ImageView imageView;
+    @SuppressWarnings("unused")
     int numPixels;
 
     @Override
@@ -159,9 +160,12 @@ public class MainActivity extends Activity {
 
     @OnItemClick(R.id.grid_view)
     void onItemClick(int position) {
+        //noinspection unchecked
         Palette.Swatch swatch = ((Map.Entry<String, Palette.Swatch>) gridView.getItemAtPosition(position)).getValue();
 
+        //noinspection StringBufferReplaceableByString
         StringBuilder b = new StringBuilder();
+        //noinspection StringConcatenationInsideStringBufferAppend,StringConcatenationInsideStringBufferAppend
         b.append("Title Text Color: ").append("#" + Integer.toHexString(swatch.getBodyTextColor()).toUpperCase()).append("\n");
         b.append("Population: ").append(swatch.getPopulation());
 

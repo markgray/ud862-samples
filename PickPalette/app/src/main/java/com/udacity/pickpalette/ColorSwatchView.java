@@ -18,6 +18,7 @@ package com.udacity.pickpalette;
 import android.content.Context;
 import android.widget.LinearLayout;
 
+@SuppressWarnings("unused")
 public class ColorSwatchView extends LinearLayout {
     public ColorSwatchView(Context context) {
         super(context);

@@ -15,6 +15,7 @@
  */
 package com.udacity.pickpalette;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.v7.graphics.Palette;
 import android.view.LayoutInflater;
@@ -23,19 +24,22 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class SwatchAdapter extends ArrayAdapter {
 
+    @SuppressWarnings("unused")
     Palette palette;
 
     public SwatchAdapter(Context context, Object [] swatches) {
+        //noinspection unchecked
         super(context, 0, swatches);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        //noinspection unchecked
         Map.Entry<String, Palette.Swatch> entry = (Map.Entry<String, Palette.Swatch>)getItem(position);
 
         if (convertView == null) {

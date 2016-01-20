@@ -7,4 +7,6 @@
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="color_info">Color Information</string>
+    <string name="image_for_palette">Image that palette is drawn from</string>
 </resources>
