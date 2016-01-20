@@ -22,7 +22,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.SearchView;
 import android.widget.TextView;
 
 import butterknife.ButterKnife;
@@ -31,6 +30,7 @@ import butterknife.InjectView;
 /**
  * A placeholder fragment containing a simple view.
  */
+@SuppressWarnings("deprecation")
 public class MainActivityFragment extends Fragment {
 
     @InjectView(R.id.display4)
