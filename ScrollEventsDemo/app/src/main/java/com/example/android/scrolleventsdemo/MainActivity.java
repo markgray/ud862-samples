@@ -18,7 +18,6 @@ package com.example.android.scrolleventsdemo;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -43,8 +42,8 @@ public class MainActivity extends Activity {
 
             @Override
             public void onBindViewHolder(ViewHolder viewHolder, int position) {
-                viewHolder.text1.setText("Bacon");
-                viewHolder.text2.setText("Bacon ipsum dolor amet pork belly meatball kevin spare ribs. Frankfurter swine corned beef meatloaf, strip steak.");
+                viewHolder.text1.setText(R.string.bacon);
+                viewHolder.text2.setText(R.string.bacon_steak);
             }
 
             @Override
