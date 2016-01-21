@@ -17,17 +17,13 @@
 package com.example.android.papertransformations;
 
 import android.animation.Animator;
+import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.PaintDrawable;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.transition.TransitionManager;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
@@ -76,6 +72,7 @@ public class MainActivity extends Activity {
         static int green;
         static int white;
 
+        @SuppressLint("PrivateResource")
         public ViewHolder(View itemView) {
             super(itemView);
             text1 = (TextView) itemView.findViewById(android.R.id.text1);
@@ -83,14 +80,16 @@ public class MainActivity extends Activity {
             itemView.setOnClickListener(this);
 
             if (green == 0)
+                //noinspection deprecation
                 green = itemView.getContext().getResources().getColor(R.color.green);
             if (white == 0)
+                //noinspection deprecation
                 white = itemView.getContext().getResources().getColor(R.color.background_material_light);
         }
 
         @Override
         public void onClick(View view) {
-            boolean isVeggie = ((ColorDrawable)view.getBackground()) != null && ((ColorDrawable)view.getBackground()).getColor() == green;
+            boolean isVeggie = view.getBackground() != null && ((ColorDrawable)view.getBackground()).getColor() == green;
 
             int finalRadius = (int)Math.hypot(view.getWidth()/2, view.getHeight()/2);
 
@@ -99,7 +98,7 @@ public class MainActivity extends Activity {
                 text2.setText(baconText);
                 view.setBackgroundColor(white);
             } else {
-                Animator anim = ViewAnimationUtils.createCircularReveal(view, (int) view.getWidth()/2, (int) view.getHeight()/2, 0, finalRadius);
+                Animator anim = ViewAnimationUtils.createCircularReveal(view, view.getWidth() /2, view.getHeight() /2, 0, finalRadius);
                 text1.setText(veggieTitle);
                 text2.setText(veggieText);
                 view.setBackgroundColor(green);
