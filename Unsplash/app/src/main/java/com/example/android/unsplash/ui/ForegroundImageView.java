@@ -13,7 +13,7 @@ import com.example.android.unsplash.R;
 
 
 /**
- * Created by nickbutcher on 2/24/15.
+ * Created by nickbutcher on 2/24/15 and modified by markgray
  */
 public class ForegroundImageView extends ImageView {
 

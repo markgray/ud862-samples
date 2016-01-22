@@ -63,6 +63,7 @@ public class ItemClickSupport {
         return support;
     }
 
+    @SuppressWarnings("unused")
     public static ItemClickSupport removeFrom(RecyclerView view) {
         ItemClickSupport support = (ItemClickSupport) view.getTag(R.id.item_click_support);
         if (support != null) {
@@ -76,6 +77,7 @@ public class ItemClickSupport {
         return this;
     }
 
+    @SuppressWarnings("unused")
     public ItemClickSupport setOnItemLongClickListener(OnItemLongClickListener listener) {
         mOnItemLongClickListener = listener;
         return this;

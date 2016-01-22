@@ -36,7 +36,7 @@ public class DetailActivity extends Activity {
                 .load(getIntent().getData())
                 .placeholder(R.color.placeholder)
                 .into(imageView);
-        author.setText("—" + getIntent().getStringExtra(EXTRA_AUTHOR));
+        author.setText(String.format("—%s", getIntent().getStringExtra(EXTRA_AUTHOR)));
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

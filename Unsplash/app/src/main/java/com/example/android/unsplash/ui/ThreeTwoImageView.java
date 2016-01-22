@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 
 /**
- * Created by nickbutcher on 7/29/15.
+ * Created by nickbutcher on 7/29/15 and modified by markgray
  */
 public class ThreeTwoImageView extends ForegroundImageView {
 
